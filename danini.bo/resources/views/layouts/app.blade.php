@@ -9,7 +9,7 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>{{ config('app.name', 'Laravel') }}</title>
+  <title>{{ ('Danini') }}</title>
 
   <!-- Styles -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -17,7 +17,7 @@
 
 <body>
   <div id="app">
-    <header-cone title_cone="{{ config('app.name', 'DANINI') }}" url="{{ url('/') }}">
+    <header-cone title_cone="{{ ('DANINI') }}" url="{{ url('/') }}">
       @guest
       <li><a href="{{ route('login') }}">Login</a></li>
       <li><a href="{{ route('register') }}">Register</a></li>

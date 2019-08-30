@@ -17,6 +17,9 @@ window.Vue = require('vue');
 
 Vue.component('header-cone', require('./components/Header.vue'));
 Vue.component('painel', require('./components/Painel.vue'));
+Vue.component('box', require('./components/Box.vue'));
+Vue.component('page', require('./components/Page.vue'));
+Vue.component('table-list', require('./components/TableList.vue'));
 
 const app = new Vue({
     el: '#app'

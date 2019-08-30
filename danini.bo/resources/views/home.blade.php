@@ -1,37 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1 ">
-      <painel title_cone="Dashboard">
+<page tamanho="10">
+  <painel title_cone="Dashboard" color="panel-default">
 
-        <div class="row">
-          <div class="col-md-4">
-            <painel title_cone="Componente 1">
-              Testando 1
-            </painel>
-          </div>
-        </div>
+    <div class="row">
 
-        <div class="row">
-          <div class="col-md-4">
-            <painel title_cone="Componente 2">
-              Testando 2
-            </painel>
-          </div>
-        </div>
+      <div class="col-md-4">
+        <box qtd="80" titulo="Artigos" url="{{route('artigos.index')}}" color="#0c7a96" icone="fa fa-instagram"></box>
+      </div>
 
-        <div class="row">
-          <div class="col-md-4">
-            <painel title_cone="Componente 3">
-              Testando 3
-            </painel>
-          </div>
-        </div>
+      <div class="col-md-4">
+        <box qtd="1500" titulo="Usuários" url="#" color="#05c9bf" icone="fa fa-user"></box>
+      </div>
 
-      </painel>
+      <div class="col-md-4">
+        <box qtd="3" titulo="Autores" url="#" color="#12ec99" icone="fa fa-edit"></box>
+      </div>
+
     </div>
-  </div>
-</div>
+
+  </painel>
+</page>
 @endsection
