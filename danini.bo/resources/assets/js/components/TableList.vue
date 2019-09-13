@@ -1,7 +1,6 @@
 <template>
 <div>
   <div class="form-inline">
-    <a class="btn btn-success" v-if="create" v-bind:href="create">Criar</a>
     <div class="form-group pull-right">
       <input type="search" placeholder="Buscar" class="form-control" v-model="buscar">
     </div>
@@ -10,14 +9,14 @@
       <thead class="thead-dark">
         <tr>
           <th style="cursor: pointer;" v-on:click="orderColum(index)" v-for="(titles,index) in titles" :key="titles">{{titles}}</th>
-          <th v-if="detail || edit || deletar">Ação</th>
+          <th class="text-right" v-if="detail || edit || deletar">Ação</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="(item, index) in list" :key="item">
           <td v-for="i in item" :key="i">{{i}}</td>
 
-          <td v-if="detail || edit || deletar">
+          <td class="text-right" v-if="detail || edit || deletar">
             <form v-bind:id="index" v-if="deletar && token" v-bind:action="deletar" method="post">
               <input type="hidden" name="_method" value="DELETE">
               <input type="hidden" name="_token" v-bind:value="token">

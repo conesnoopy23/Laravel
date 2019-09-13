@@ -14,7 +14,11 @@ class Artigos extends Controller
      */
     public function index()
     {
-        return view('admin.artigos.artigos');
+        $listCrumbs = json_encode([
+            ["titulo"=>"Home","url"=>route('home')],
+            ["titulo"=>"Lista de Compras","url"=>""],
+        ]);
+        return view('admin.artigos.artigos',compact('listCrumbs'));
     }
 
     /**

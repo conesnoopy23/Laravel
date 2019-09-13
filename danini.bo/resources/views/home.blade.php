@@ -3,7 +3,7 @@
 @section('content')
 <page tamanho="10">
   <painel title_cone="Dashboard" color="panel-default">
-
+    <crumb v-bind:lista="{{$listCrumbs}}"></crumb>
     <div class="row">
 
       <div class="col-md-4">
